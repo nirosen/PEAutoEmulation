@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+  <Type>
+    <Name>Microsoft.Management.Infrastructure.CimInstance#root/Microsoft/Windows/WindowsUpdate/MSFT_WUUpdate</Name>
+    <Members>
+      <ScriptProperty>
+        <Name>UpdateID</Name>
+        <GetScriptBlock>
+          $this.PSBase.CimInstanceProperties['UpdateID'].Value
+        </GetScriptBlock>
+        <SetScriptBlock>
+          param($newValue)
+          $this.PSBase.CimInstanceProperties['UpdateID'].Value = [String][Microsoft.PowerShell.Cmdletization.GeneratedTypes.MSFT_WUUpdate.UpdateID] $newValue
+        </SetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>RevisionNumber</Name>
+        <GetScriptBlock>
+          $this.PSBase.CimInstanceProperties['RevisionNumber'].Value
+        </GetScriptBlock>
+        <SetScriptBlock>
+          param($newValue)
+          $this.PSBase.CimInstanceProperties['RevisionNumber'].Value = [UInt32][Microsoft.PowerShell.Cmdletization.GeneratedTypes.MSFT_WUUpdate.RevisionNumber] $newValue
+        </SetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>Title</Name>
+        <GetScriptBlock>
+          $this.PSBase.CimInstanceProperties['Title'].Value
+        </GetScriptBlock>
+        <SetScriptBlock>
+          param($newValue)
+          $this.PSBase.CimInstanceProperties['Title'].Value = [String][Microsoft.PowerShell.Cmdletization.GeneratedTypes.MSFT_WUUpdate.Title] $newValue
+        </SetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>Description</Name>
+        <GetScriptBlock>
+          $this.PSBase.CimInstanceProperties['Description'].Value
+        </GetScriptBlock>
+        <SetScriptBlock>
+          param($newValue)
+          $this.PSBase.CimInstanceProperties['Description'].Value = [System.String][Microsoft.PowerShell.Cmdletization.GeneratedTypes.MSFT_WUUpdate.Description] $newValue
+        </SetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>MsrcSeverity</Name>
+        <GetScriptBlock>
+          $this.PSBase.CimInstanceProperties['MsrcSeverity'].Value
+        </GetScriptBlock>
+        <SetScriptBlock>
+          param($newValue)
+          $this.PSBase.CimInstanceProperties['MsrcSeverity'].Value = [System.String][Microsoft.PowerShell.Cmdletization.GeneratedTypes.MSFT_WUUpdate.MsrcSeverity] $newValue
+        </SetScriptBlock>
+      </ScriptProperty>
+      <ScriptProperty>
+        <Name>KBArticleID</Name>
+        <GetScriptBlock>
+          $this.PSBase.CimInstanceProperties['KBArticleID'].Value
+        </GetScriptBlock>
+        <SetScriptBlock>
+          param($newValue)
+          $this.PSBase.CimInstanceProperties['KBArticleID'].Value = [System.String][Microsoft.PowerShell.Cmdletization.GeneratedTypes.MSFT_WUUpdate.KBArticleID] $newValue
+        </SetScriptBlock>
+      </ScriptProperty>
+    </Members>
+  </Type>
+</Types>

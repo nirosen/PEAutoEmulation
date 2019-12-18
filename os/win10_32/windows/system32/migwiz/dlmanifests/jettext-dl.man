@@ -1,0 +1,87 @@
+﻿<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<assembly
+    xmlns="urn:schemas-microsoft-com:asm.v3"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    authors="leewoods"
+    buildFilter=""
+    company="Microsoft Corporation"
+    copyright=""
+    creationTimeStamp="2003-11-18T11:27:15.1013997-08:00"
+    description="$(resourceString.description)"
+    displayName="$(resourceString.displayName)"
+    lastUpdateTimeStamp="2005-06-07T16:21:24.1552716-07:00"
+    manifestVersion="1.0"
+    owners="leewoods"
+    supportInformation="http://support.microsoft.com"
+    testers="curtisd, davcasey"
+    >
+  <assemblyIdentity
+      language="neutral"
+      name="Microsoft-Windows-Microsoft-Data-Access-Components-JetText-DL"
+      processorArchitecture="*"
+      version="0.0.0.0"
+      />
+  <migration>
+    <migXml xmlns="">
+      <detects>
+        <detect>
+          <condition>MigXmlHelper.IsOSEarlierThan("NT","6.0.0.0")</condition>
+        </detect>
+      </detects>
+      <rules context="System">
+        <include>
+          <objectSet>
+            <!-- Jet bug 18205: HKEY_LOCAL_MACHINE” is not valid in migXml patterns; use “HKLM” instead (8-2-06 missed first one below) -->
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Text [StartDoubleWidthUnicodeCharacters]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Text [UseZeroMaxScanAs]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Text [ImportMixedTypes]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Text [DisabledExtensions]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Text [CharacterSet]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Text [ImportFixedFormat]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Text [Format]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Text [Extensions]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Text [FirstRowHasNames]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Text [MaxScanRows]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Text [ExportCurrencySymbols]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\HTML Export [ExportFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\HTML Export [CanLink]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\HTML Export [OneTablePerFile]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\HTML Export [IsamType]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\HTML Export [IndexDialog]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\HTML Export [CreateDBOnExport]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\HTML Export [SupportsLongNames]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\HTML Export [OutputFormat]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\HTML Export [ReportFormat]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\HTML Import [ImportFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\HTML Import [CanLink]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\HTML Import [OneTablePerFile]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\HTML Import [IsamType]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\HTML Import [IndexDialog]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\HTML Import [CreateDBOnExport]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\HTML Import [SupportsLongNames]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Text [ExportFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Text [ImportFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Text [CanLink]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Text [OneTablePerFile]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Text [IsamType]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Text [IndexDialog]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Text [CreateDBOnExport]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Text [SupportsLongNames]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Text [OutputFormat]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Text [ReportFormat]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Text [FormatFunction]</pattern>
+          </objectSet>
+        </include>
+        <!-- Windows Bug 1591696: 
+				<merge script="MigXmlHelper.SourcePriority()">
+					<objectSet>
+						<pattern type="Registry">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Text [StartDoubleWidthUnicodeCharacters] </pattern>
+					</objectSet>
+				</merge>
+-->
+      </rules>
+    </migXml>
+    <migrationDisplayID>Additional_Options\Windows_Core_Settings</migrationDisplayID>
+  </migration>
+</assembly>

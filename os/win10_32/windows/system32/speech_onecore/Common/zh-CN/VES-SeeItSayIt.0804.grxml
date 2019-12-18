@@ -1,0 +1,158 @@
+<?xml version= "1.0" encoding="utf-8"?>
+<grammar sapi:CarrierPhraseGr="{B2CD2657-539B-4CD4-A9EC-8EA4C77B8F20}" mode="voice" root="SeeItSayIt_SpeechRoot" tag-format="semantics/1.0" version="1.0" xml:lang="zh-cn" xmlns="http://www.w3.org/2001/06/grammar" xmlns:sapi="http://schemas.microsoft.com/Speech/2002/06/SRGSExtensions">
+
+  <rule id="f_">
+    <item>
+      <item repeat="0-1">
+        <one-of>
+          <item>点击</item>
+          <item>点按</item>
+          <item>单击</item>
+          <item>轻击</item>
+          <item>按</item>
+          <item>按下</item>
+        </one-of>
+      </item>
+      <ruleref uri="#d_"/>
+    </item>
+    <tag>out.f_domain_="SeeItSayIt";out.f_intent_="Click";if(rules.d_!=null){out.d_ControlName=rules.d_;}if(rules.b_!=null){out.b_ControlList=rules.b_;}</tag>
+  </rule>
+
+  <rule id="d_">
+    <item weight="1">
+      <ruleref uri="sharing:ControlName"/>
+      <tag>out=rules.latest()</tag>
+    </item>
+  </rule>
+
+  <rule id="b_">
+    <one-of>
+      <item>
+        确定<tag>out="ok_btn"</tag>
+      </item>
+      <item>
+        下一步<tag>out="next_btn"</tag>
+      </item>
+    </one-of>
+  </rule>
+
+  <rule id="g_">
+    <item>
+      <item repeat="0-1">
+        <one-of>
+          <item>点击</item>
+          <item>点按</item>
+          <item>单击</item>
+          <item>轻击</item>
+          <item>按</item>
+          <item>按下</item>
+        </one-of>
+      </item>
+      <ruleref uri="#d_"/>
+    </item>
+    <tag>out.g_domain_="SeeItSayIt";out.g_intent_="Click";if(rules.d_!=null){out.d_ControlName=rules.d_;}if(rules.b_!=null){out.b_ControlList=rules.b_;}</tag>
+  </rule>
+
+  <rule id="h_">
+    <one-of>
+      <item>
+        <one-of>
+          <item>开始听写</item>
+          <item>开始语音听写</item>
+          <item>开始听写到</item>
+          <item>开始语音听写到</item>
+        </one-of>
+        <item repeat="0-1">
+          <ruleref uri="#e_"/>
+        </item>
+      </item>
+      <item>
+        <item>
+          在<ruleref uri="#e_"/>
+        </item>
+        <one-of>
+          <item>里开始听写</item>
+          <item>里开始语音听写</item>
+        </one-of>
+      </item>
+    </one-of>
+    <tag>out.h_domain_="SeeItSayIt";out.__aumid="KWS";out.h_intent_="Dictate";if(rules.e_!=null){out.e_TextBoxName=rules.e_;}if(rules.c_!=null){out.c_TextBoxList=rules.c_;}</tag>
+  </rule>
+
+  <rule id="e_">
+    <item weight="1">
+      <ruleref uri="sharing:TextBoxName"/>
+      <tag>out=rules.latest()</tag>
+    </item>
+  </rule>
+
+  <rule id="c_">
+    <one-of>
+      <item>
+        firstName<tag>out="First Name"</tag>
+      </item>
+      <item>
+        lastName<tag>out="Last Name"</tag>
+      </item>
+      <item>
+        email<tag>out="E-Mail Address"</tag>
+      </item>
+    </one-of>
+  </rule>
+
+  <rule id="i_">
+    <one-of>
+      <item>
+        <one-of>
+          <item>开始听写</item>
+          <item>开始语音听写</item>
+          <item>开始听写到</item>
+          <item>开始语音听写到</item>
+        </one-of>
+        <item repeat="0-1">
+          <ruleref uri="#e_"/>
+        </item>
+      </item>
+      <item>
+        <item>
+          在<ruleref uri="#e_"/>
+        </item>
+        <one-of>
+          <item>里开始听写</item>
+          <item>里开始语音听写</item>
+        </one-of>
+      </item>
+    </one-of>
+    <tag>out.i_domain_="SeeItSayIt";out.__aumid="KWS";out.i_intent_="Dictate";if(rules.e_!=null){out.e_TextBoxName=rules.e_;}if(rules.c_!=null){out.c_TextBoxList=rules.c_;}</tag>
+  </rule>
+
+  <rule id="SeeItSayIt_SpeechRoot" scope="public">
+    <item>
+      <one-of>
+        <item>
+          <ruleref uri="#f_"/>
+        </item>
+        <item>
+          <ruleref uri="#h_"/>
+        </item>
+      </one-of>
+      <tag>out.rule=rules.latest();</tag>
+    </item>
+    <tag>out=out.rule;</tag>
+  </rule>
+
+  <rule id="SeeItSayIt_TextRoot" scope="public">
+    <item>
+      <one-of>
+        <item>
+          <ruleref uri="#g_"/>
+        </item>
+        <item>
+          <ruleref uri="#i_"/>
+        </item>
+      </one-of>
+      <tag>out.rule=rules.latest();</tag>
+    </item>
+    <tag>out=out.rule;</tag>
+  </rule>
+</grammar>

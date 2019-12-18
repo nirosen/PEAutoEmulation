@@ -1,0 +1,95 @@
+﻿<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<assembly
+    xmlns="urn:schemas-microsoft-com:asm.v3"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    authors="leewoods"
+    buildFilter=""
+    company="Microsoft Corporation"
+    copyright=""
+    creationTimeStamp="2003-11-18T11:27:15.1013997-08:00"
+    description="$(resourceString.description)"
+    displayName="$(resourceString.displayName)"
+    lastUpdateTimeStamp="2005-06-07T16:22:25.4728026-07:00"
+    manifestVersion="1.0"
+    owners="leewoods"
+    supportInformation="http://support.microsoft.com"
+    testers="curtisd, davcasey"
+    >
+  <assemblyIdentity
+      language="neutral"
+      name="Microsoft-Windows-Microsoft-Data-Access-Components-JetExchLotus-DL"
+      processorArchitecture="*"
+      version="0.0.0.0"
+      />
+  <migration>
+    <migXml xmlns="">
+      <detects>
+        <detect>
+          <condition>MigXmlHelper.IsOSEarlierThan("NT","6.0.0.0")</condition>
+        </detect>
+      </detects>
+      <rules context="System">
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Lotus [DisabledExtensions]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Lotus [ImportMixedTypes]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Lotus [FirstRowHasNames]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Lotus [AppendBlankRows]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Lotus [TypeGuessRows]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Exchange 4.0 [ImportFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Exchange 4.0 [CanLink]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Exchange 4.0 [OneTablePerFile]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Exchange 4.0 [IsamType]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Exchange 4.0 [IndexDialog]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Exchange 4.0 [CreateDBOnExport]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Exchange 4.0 [SupportsLongNames]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WJ2 [ExportFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WJ2 [ImportFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WJ2 [CanLink]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WJ2 [OneTablePerFile]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WJ2 [IsamType]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WJ2 [IndexDialog]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WJ2 [CreateDBOnExport]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WJ2 [SupportsLongNames]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WJ3 [CanLink]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WJ3 [OneTablePerFile]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WJ3 [IsamType]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WJ3 [IndexDialog]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WJ3 [CreateDBOnExport]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WJ3 [SupportsLongNames]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WK1 [ExportFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WK1 [ImportFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WK1 [CanLink]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WK1 [OneTablePerFile]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WK1 [IsamType]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WK1 [IndexDialog]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WK1 [CreateDBOnExport]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WK1 [SupportsLongNames]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WK3 [ExportFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WK3 [CanLink]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WK3 [OneTablePerFile]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WK3 [IsamType]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WK3 [IndexDialog]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WK3 [CreateDBOnExport]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WK3 [SupportsLongNames]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WK4 [CanLink]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WK4 [OneTablePerFile]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WK4 [IsamType]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WK4 [IndexDialog]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WK4 [CreateDBOnExport]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Lotus WK4 [SupportsLongNames]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Outlook 9.0 [ImportFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Outlook 9.0 [CanLink]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Outlook 9.0 [OneTablePerFile]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Outlook 9.0 [IsamType]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Outlook 9.0 [IndexDialog]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Outlook 9.0 [CreateDBOnExport]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Outlook 9.0 [SupportsLongNames]</pattern>
+          </objectSet>
+        </include>
+      </rules>
+    </migXml>
+    <migrationDisplayID>Additional_Options\Windows_Core_Settings</migrationDisplayID>
+  </migration>
+</assembly>

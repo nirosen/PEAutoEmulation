@@ -1,0 +1,44 @@
+<sysprepInformation><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-IE-Sysprep" version="11.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0C00"></sysprepOrder>
+<sysprepModule methodName="Sysprep_Cleanup_IE" moduleName="$(runtime.system32)\iesysprep.dll"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-Sysprep-SpNet" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0D00"></sysprepOrder>
+<sysprepModule methodName="Sysprep_Clean_Net" moduleName="$(runtime.system32)\spnet.dll"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-Cryptography" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0F00"></sysprepOrder>
+<sysprepModule methodName="CryptoSysPrep_Clean" moduleName="$(runtime.windows)\system32\capisp.dll"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-UXInit" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x1000"></sysprepOrder>
+<fileActions>
+<deleteFile path="$(runtime.windows)\Resources\Themes\aero\VSCache\*"></deleteFile></fileActions></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-DeviceCensus-Schedule-ClientServer" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x1600"></sysprepOrder>
+<sysprepModule methodName="SysprepCleanupEnableCustomTrigger" moduleName="$(runtime.system32)\dcntel.dll"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-COM-DTC-Runtime" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x1100"></sysprepOrder>
+<sysprepModule methodName="SysPrepDtcCleanup" moduleName="$(runtime.windows)\system32\msdtcprx.dll"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-TapiSetup" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x1200"></sysprepOrder>
+<sysprepModule methodName="TapiSysPrepClean" moduleName="$(runtime.system32)\tapisysprep"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-Sysprep-SpOpk" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0100"></sysprepOrder>
+<sysprepValidate methodName="Sysprep_Clean_Validate_Opk" moduleName="$(runtime.system32)\spopk.dll"></sysprepValidate>
+<sysprepModule methodName="Sysprep_Clean_Opk" moduleName="$(runtime.system32)\spopk.dll"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-SQMApi" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0300"></sysprepOrder>
+<sysprepModule methodName="SqmSysprepCleanup" moduleName="sqmapi.dll"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-TabletPC-InputPersonalization" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x1300"></sysprepOrder>
+<sysprepModule methodName="Sysprep_Cleanup_IPS" moduleName="$(runtime.commonFiles)\Microsoft Shared\Ink\IpsMigrationPlugin.dll"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-LpkSetup" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0500"></sysprepOrder>
+<sysprepModule methodName="Sysprep_Generalize_MUILangCleanup" moduleName="$(runtime.system32)\LangCleanupSysprepAction.dll"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-SystemMaintenanceService-Core" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0600"></sysprepOrder>
+<sysprepModule methodName="PfSvSysprepCleanup" moduleName="$(runtime.system32)\sysmain.dll"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-SystemRestore-Main" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0800"></sysprepOrder>
+<sysprepModule methodName="SysprepCleanup" moduleName="srclient.dll"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-Shell-Setup" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0900"></sysprepOrder>
+<sysprepModule methodName="Sysprep_Cleanup_Shell" moduleName="$(runtime.system32)\shsetup.dll"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-Compat-GeneralTel" version="10.0.18362.207" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x1500"></sysprepOrder>
+<sysprepModule methodName="SysprepCleanupEnableCustomTrigger" moduleName="$(runtime.system32)\generaltel.dll"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-TaskScheduler-Service" version="10.0.18362.175" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0E00"></sysprepOrder>
+<registryActions>
+<deleteValue name="HashingCompleted" path="HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule"></deleteValue>
+<deleteValue name="MigrationCleanupCompleted" path="HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule"></deleteValue>
+<deleteValue name="DomainJoinDetected" path="HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule"></deleteValue></registryActions></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-EventLog" version="10.0.18362.207" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0400"></sysprepOrder>
+<sysprepModule methodName="EvtIntSysprepCleanup" moduleName="$(runtime.system32)\wevtapi.dll"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-ErrorReportingCore" version="10.0.18362.239" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0A00"></sysprepOrder>
+<sysprepModule methodName="WerSysprepCleanup" moduleName="wer.dll"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="WindowsSearchEngine" version="7.0.18362.207" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0B00"></sysprepOrder>
+<sysprepModule methodName="MSSrch_SysPrep_Cleanup" moduleName="$(runtime.system32)\mssrch.dll"></sysprepModule></imaging></sysprepInformation>

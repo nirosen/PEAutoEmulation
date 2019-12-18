@@ -1,0 +1,188 @@
+﻿<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<assembly
+    xmlns="urn:schemas-microsoft-com:asm.v3"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    authors="leewoods"
+    buildFilter=""
+    company="Microsoft Corporation"
+    copyright=""
+    creationTimeStamp="2003-11-18T11:27:15.1013997-08:00"
+    description="$(resourceString.description)"
+    displayName="$(resourceString.displayName)"
+    lastUpdateTimeStamp="2005-06-07T16:21:24.1552716-07:00"
+    manifestVersion="1.0"
+    owners="leewoods"
+    supportInformation="http://support.microsoft.com"
+    testers="curtisd, davcasey"
+    >
+  <assemblyIdentity
+      language="neutral"
+      name="Microsoft-Windows-Microsoft-Data-Access-Components-JetXbasePdx-DL"
+      processorArchitecture="*"
+      version="0.0.0.0"
+      />
+  <migration>
+    <migXml xmlns="">
+      <detects>
+        <detect>
+          <condition>MigXmlHelper.IsOSEarlierThan("NT","6.0.0.0")</condition>
+        </detect>
+      </detects>
+      <rules context="System">
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\xBase [BDE]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Paradox [CollatingSequence]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Paradox [DataCodePage]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Paradox [NetworkAccess]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Paradox [PageTimeout]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Xbase [DbcsStr]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Xbase [Mark]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Xbase [Date]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Xbase [Exact]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Xbase [Deleted]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Xbase [Century]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Xbase [CollatingSequence]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Xbase [DataCodePage]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Xbase [NetworkAccess]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Xbase [PageTimeout]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase 5.0 [ExportFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase 5.0 [ImportFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase 5.0 [CanLink]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase 5.0 [OneTablePerFile]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase 5.0 [IsamType]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase 5.0 [IndexDialog]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase 5.0 [IndexFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase 5.0 [CreateDBOnExport]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase 5.0 [SupportsLongNames]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase III [ExportFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase III [ImportFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase III [CanLink]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase III [OneTablePerFile]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase III [IsamType]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase III [IndexDialog]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase III [IndexFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase III [CreateDBOnExport]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase III [SupportsLongNames]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase IV [ExportFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase IV [ImportFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase IV [CanLink]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase IV [OneTablePerFile]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase IV [IsamType]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase IV [IndexDialog]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase IV [IndexFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase IV [CreateDBOnExport]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\dBase IV [SupportsLongNames]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 3.X [ExportFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 3.X [ImportFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 3.X [CanLink]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 3.X [OneTablePerFile]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 3.X [IsamType]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 3.X [IndexDialog]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 3.X [CreateDBOnExport]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 3.X [SupportsLongNames]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 4.X [ExportFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 4.X [CanLink]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 4.X [OneTablePerFile]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 4.X [IsamType]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 4.X [IndexDialog]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 4.X [CreateDBOnExport]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 4.X [SupportsLongNames]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 5.X [ExportFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 5.X [CanLink]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 5.X [OneTablePerFile]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 5.X [IsamType]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 5.X [IndexDialog]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 5.X [CreateDBOnExport]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 5.X [SupportsLongNames]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 7.X [ExportFilter]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 7.X [CanLink]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 7.X [OneTablePerFile]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 7.X [IsamType]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 7.X [IndexDialog]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 7.X [CreateDBOnExport]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Paradox 7.X [SupportsLongNames]</pattern>
+          </objectSet>
+        </include>
+        <!-- Windows Bug 1591705:	
+				<merge script="MigXmlHelper.SourcePriority()">
+					<objectSet>
+						<pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\xBase [BDE] </pattern>
+					</objectSet>
+				</merge> -->
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\xBase [INFPath]</pattern>
+          </objectSet>
+        </include>
+        <!--			<merge script="MigXmlHelper.SourcePriority()">
+					<objectSet>
+						<pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\xBase [INFPath] </pattern>
+					</objectSet>
+				</merge>  -->
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\xBase [ConvertNumToDecimal]</pattern>
+          </objectSet>
+        </include>
+        <!--			<merge script="MigXmlHelper.SourcePriority()">
+					<objectSet>
+						<pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\xBase [ConvertNumToDecimal] </pattern>
+					</objectSet>
+				</merge>  -->
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Paradox [ConvertNumToDecimal]</pattern>
+          </objectSet>
+        </include>
+        <!--			<merge script="MigXmlHelper.SourcePriority()">
+					<objectSet>
+						<pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Paradox [ConvertNumToDecimal] </pattern>
+					</objectSet>
+				</merge>  -->
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Paradox [BDE]</pattern>
+          </objectSet>
+        </include>
+        <!--			<merge script="MigXmlHelper.SourcePriority()">
+					<objectSet>
+						<pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Paradox [BDE] </pattern>
+					</objectSet>
+				</merge>  -->
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Paradox [ParadoxUserName]</pattern>
+          </objectSet>
+        </include>
+        <!--			<merge script="MigXmlHelper.SourcePriority()">
+					<objectSet>
+						<pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Paradox [ParadoxUserName] </pattern>
+					</objectSet>
+				</merge>  -->
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Paradox [ParadoxNetPath]</pattern>
+          </objectSet>
+        </include>
+        <!--			<merge script="MigXmlHelper.SourcePriority()">
+					<objectSet>
+						<pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Paradox [ParadoxNetPath] </pattern>
+					</objectSet>
+				</merge>  -->
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Paradox [ParadoxNetStyle]</pattern>
+          </objectSet>
+        </include>
+        <!--			<merge script="MigXmlHelper.SourcePriority()">
+					<objectSet>
+						<pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Paradox [ParadoxNetStyle] </pattern>
+					</objectSet>
+				</merge>  -->
+      </rules>
+    </migXml>
+    <migrationDisplayID>Additional_Options\Windows_Core_Settings</migrationDisplayID>
+  </migration>
+</assembly>

@@ -1,0 +1,84 @@
+﻿<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<assembly
+    xmlns="urn:schemas-microsoft-com:asm.v3"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    authors="leewoods"
+    buildFilter=""
+    company="Microsoft Corporation"
+    copyright=""
+    creationTimeStamp="2003-11-18T11:27:15.1013997-08:00"
+    description="$(resourceString.description1)"
+    displayName="$(resourceString.displayName0)"
+    lastUpdateTimeStamp="2005-05-21T01:59:18.0846756-07:00"
+    manifestVersion="1.0"
+    owners="leewoods"
+    supportInformation="http://support.microsoft.com"
+    testers="curtisd, davcasey"
+    >
+  <assemblyIdentity
+      language="neutral"
+      name="Microsoft-Windows-Microsoft-Data-Access-Components-JetCore-DL"
+      processorArchitecture="*"
+      publicKeyToken=""
+      version="0.0.0.0"
+      />
+  <migration>
+    <migXml xmlns="">
+      <detects>
+        <detect>
+          <condition>MigXmlHelper.IsOSEarlierThan("NT","6.0.0.0")</condition>
+        </detect>
+      </detects>
+      <rules context="System">
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines [SystemDB]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines [CompactByPKey]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines [PrevFormatCompactWithUNICODECompression]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines [SandBoxMode]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 4.0 [PageTimeout]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 4.0 [LockRetry]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 4.0 [MaxBufferSize]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 4.0 [Threads]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 4.0 [ExclusiveAsyncDelay]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 4.0 [SharedAsyncDelay]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 4.0 [FlushTransactionTimeout]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 4.0 [MaxLocksPerFile]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 4.0 [LockDelay]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 4.0 [RecycleLVs]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 4.0 [PagesLockedToTableLock]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 4.0 [UserCommitSync]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 4.0 [ImplicitCommitSync]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\ODBC [TraceODBCAPI]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\ODBC [DisableAsync]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\ODBC [TraceSQLMode]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\ODBC [QueryTimeout]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\ODBC [LoginTimeout]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\ODBC [ConnectionTimeout]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\ODBC [TryJetAuth]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\ODBC [FatBlastRows]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\ODBC [FatBlastTimeout]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\ODBC [AsyncRetryInterval]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\ODBC [AttachCaseSensitive]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\ODBC [FastRequery]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\ODBC [ODBCISAMAttach]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\ODBC [PreparedInsert]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\ODBC [PreparedUpdate]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\ODBC [SnapshotOnly]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\ODBC [AttachableObjects]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Transporter [Priority_FS]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Transporter [Priority_Direct]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Transporter [Priority_Internet]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Transporter [Timeout_Synch_Lock]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Transporter [Timeout_Synch]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Transporter [Timeout_Synch_Internet_Server]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Transporter [Timeout_Internet_Client]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Transporter [Timeout_Internet_Connect]</pattern>
+          </objectSet>
+        </include>
+      </rules>
+    </migXml>
+    <migrationDisplayID>Additional_Options\Windows_Core_Settings</migrationDisplayID>
+  </migration>
+</assembly>

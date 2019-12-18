@@ -1,0 +1,66 @@
+<sysprepInformation><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-IE-Sysprep" version="11.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0F00"></sysprepOrder>
+<sysprepModule methodName="Sysprep_Specialize_IE" moduleName="$(runtime.system32)\iesysprep.dll"></sysprepModule>
+<sysprepModule methodName="Sysprep_Online_Specialize_IE" moduleName="$(runtime.system32)\iesysprep.dll" moduleType="online"></sysprepModule>
+<sysprepModule methodName="Sysprep_Offline_Specialize_IE" moduleName="$(runtime.system32)\iesysprep.dll" moduleType="offline"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-Cryptography" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x1100"></sysprepOrder>
+<sysprepModule methodName="CryptoSysPrep_Specialize" moduleName="$(runtime.windows)\system32\capisp.dll"></sysprepModule>
+<sysprepModule methodName="CryptoSysPrep_Specialize_Offline" moduleName="$(runtime.windows)\system32\capisp.dll" moduleType="offline"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-Sysprep-SpBcd" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x1200"></sysprepOrder>
+<sysprepModule methodName="Sysprep_Online_Specialize_Bcd" moduleName="$(runtime.system32)\spbcd.dll" moduleType="online"></sysprepModule>
+<sysprepModule methodName="Sysprep_Offline_Specialize_Bcd" moduleName="$(runtime.system32)\spbcd.dll" moduleType="offline"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-Provisioning-Sysprep" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x1d00"></sysprepOrder>
+<sysprepModule methodName="ProvPackageSysprepSpecialize" moduleName="$(runtime.system32)\ProvSysprep.dll"></sysprepModule>
+<sysprepModule methodName="ProvPackageSysprepSpecializeOffline" moduleName="$(runtime.system32)\ProvSysprep.dll" moduleType="offline"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-COM-DTC-Runtime" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x1300"></sysprepOrder>
+<sysprepModule methodName="SysPrepDtcSpecialize" moduleName="$(runtime.windows)\system32\msdtcprx.dll" moduleType="online"></sysprepModule>
+<sysprepModule methodName="SysPrepDtcOfflineSpecialize" moduleName="$(runtime.windows)\system32\msdtcspoffln.dll" moduleType="offline"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="StartupApp-Task-Data" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x1500"></sysprepOrder>
+<sysprepModule methodName="SusRunOEMTaskOffline" moduleName="$(runtime.system32)\startupscan.dll" moduleType="offline"></sysprepModule>
+<sysprepModule methodName="SusRunOEMTaskOnline" moduleName="$(runtime.system32)\startupscan.dll" moduleType="online"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-WinRE-RecoveryAgent" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x1a00"></sysprepOrder>
+<sysprepModule methodName="WinRE_Specialize" moduleName="$(runtime.system32)\reagent.dll" moduleType="online"></sysprepModule>
+<sysprepModule methodName="WinRE_Specialize_Offline" moduleName="$(runtime.system32)\reagent.dll" moduleType="offline"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-Sysprep-SpOpk" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0100"></sysprepOrder>
+<sysprepModule methodName="Sysprep_Offline_Specialize_Opk" moduleName="$(runtime.system32)\spopk.dll" moduleType="offline"></sysprepModule>
+<sysprepModule methodName="Sysprep_Online_Specialize_Opk" moduleName="$(runtime.system32)\spopk.dll" moduleType="online"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-Restore-ACL-CmdLine" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0200"></sysprepOrder>
+<sysprepModule methodName="DDACLSys_Specialize" moduleName="$(runtime.system32)\DDACLSys.dll" moduleType="online"></sysprepModule>
+<sysprepModule methodName="DDACLSys_Offline_Specialize" moduleName="$(runtime.system32)\DDACLSys.dll" moduleType="offline"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-Fault-Tolerant-Heap-Core" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0400"></sysprepOrder>
+<sysprepModule methodName="FthSysprepSpecialize" moduleName="$(runtime.system32)\fthsvc.dll" moduleType="online"></sysprepModule>
+<sysprepModule methodName="FthSysprepSpecializeOffline" moduleName="$(runtime.system32)\fthsvc.dll" moduleType="offline"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-Power-Sysprep" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0900"></sysprepOrder>
+<sysprepModule methodName="PowerCustomizePlatformPowerSettingsOnline" moduleName="$(runtime.system32)\posetup.dll" moduleType="online"></sysprepModule>
+<sysprepModule methodName="PowerCustomizePlatformPowerSettingsOffline" moduleName="$(runtime.system32)\posetup.dll" moduleType="offline"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-PnpSysprep" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0500"></sysprepOrder>
+<sysprepModule methodName="Sysprep_Specialize_Pnp" moduleName="$(runtime.system32)\sppnp.dll"></sysprepModule>
+<sysprepModule methodName="Sysprep_Specialize_Offline_Pnp" moduleName="$(runtime.system32)\sppnp.dll" moduleType="offline"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-TIScavengeTask" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x1b00"></sysprepOrder>
+<registryActions>
+<deleteValue name="LastScavengingStarvationReport" path="HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide"></deleteValue></registryActions></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-Security-Security Configuration Engine Client" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0600"></sysprepOrder>
+<sysprepModule methodName="SceSysPrep" moduleName="$(runtime.system32)\scecli.dll" moduleType="online"></sysprepModule>
+<sysprepModule methodName="SceSysPrepOffline" moduleName="$(runtime.system32)\scecli.dll" moduleType="offline"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-WofUtil" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0080"></sysprepOrder>
+<registryActions>
+<deleteValue name="SystemPolicy" path="HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\WOF"></deleteValue>
+<deleteValue name="EffectiveFlags" path="HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\WOF"></deleteValue></registryActions></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-TerminalServices-LocalSessionManager" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0800"></sysprepOrder>
+<sysprepModule methodName="LSMSysPrepRestoreOffline" moduleName="$(runtime.system32)\setup\tssysprep.dll" moduleType="offline"></sysprepModule>
+<sysprepModule methodName="LSMSysPrepRestoreOnline" moduleName="$(runtime.system32)\setup\tssysprep.dll" moduleType="online"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-Resource-Exhaustion-Detector-Core" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0E00"></sysprepOrder>
+<sysprepModule methodName="RdrSysprepSpecialize" moduleName="$(runtime.system32)\radardt.dll" moduleType="online"></sysprepModule>
+<sysprepModule methodName="RdrSysprepSpecializeOffline" moduleName="$(runtime.system32)\radardt.dll" moduleType="offline"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-ServicingStack" version="10.0.18362.235" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x1c00"></sysprepOrder>
+<registryActions>
+<deleteValue name="DecompressOverride" path="HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide"></deleteValue></registryActions></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-AppX-Sysprep" version="10.0.18362.239" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0D00"></sysprepOrder>
+<sysprepModule methodName="AppxSysprepSpecializeOffline" moduleName="$(runtime.system32)\AppxSysprep.dll" moduleType="offline"></sysprepModule>
+<sysprepModule methodName="AppxSysprepSpecializeOnline" moduleName="$(runtime.system32)\AppxSysprep.dll" moduleType="online"></sysprepModule></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-TerminalServices-RemoteConnectionManager" version="10.0.18362.53" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0700"></sysprepOrder>
+<registryActions>
+<deleteKey path="HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Terminal Server\RCM\Secrets"></deleteKey></registryActions></imaging><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-TerminalServices-ClientActiveXCore" version="10.0.18362.239" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0A00"></sysprepOrder>
+<sysprepModule methodName="RdpSysPrepRestoreOffline" moduleName="$(runtime.system32)\setup\tssysprep.dll" moduleType="offline"></sysprepModule>
+<sysprepModule methodName="RdpSysPrepRestoreOnline" moduleName="$(runtime.system32)\setup\tssysprep.dll" moduleType="online"></sysprepModule></imaging></sysprepInformation>

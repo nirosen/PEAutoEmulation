@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  This file contains the cmdlet definitions for the MSFT_WUUpdate data type. This defines each property and its type.
+
+  This should only need modification and revision change (for cmdlet versioning) when the definition of MSFT_WUUpdate has changed.
+-->
+<PowerShellMetadata xmlns="http://schemas.microsoft.com/cmdlets-over-objects/2009/11">
+  <Class ClassName="root\microsoft\windows\windowsupdate\MSFT_WUUpdate" ClassVersion="1.0.1">
+    <Version>1.0.0.1</Version>
+    <DefaultNoun>WUUpdate</DefaultNoun>
+    <InstanceCmdlets>
+      <GetCmdletParameters>
+        <QueryableProperties>
+          <Property PropertyName="Title">
+            <Type PSType="System.String" />
+            <RegularQuery AllowGlobbing="true">
+              <CmdletParameterMetadata Position="0" IsMandatory="false"  ValueFromPipelineByPropertyName="true"/>
+            </RegularQuery>
+          </Property>
+          <Property PropertyName="Description">
+            <Type PSType="System.String" />
+            <RegularQuery AllowGlobbing="true">
+              <CmdletParameterMetadata Position="0" IsMandatory="false"  ValueFromPipelineByPropertyName="true"/>
+            </RegularQuery>
+          </Property>
+          <Property PropertyName="KBArticleID">
+            <Type PSType="System.String" />
+            <RegularQuery AllowGlobbing="true">
+              <CmdletParameterMetadata Position="0" IsMandatory="false"  ValueFromPipelineByPropertyName="true"/>
+            </RegularQuery>
+          </Property>
+          <Property PropertyName="MsrcSeverity">
+            <Type PSType="System.String" />
+            <RegularQuery AllowGlobbing="true">
+              <CmdletParameterMetadata Position="0" IsMandatory="false"  ValueFromPipelineByPropertyName="true"/>
+            </RegularQuery>
+          </Property>
+          <Property PropertyName="UpdateID">
+            <Type PSType="System.String" />
+            <RegularQuery AllowGlobbing="true">
+              <CmdletParameterMetadata Position="0" IsMandatory="false"  ValueFromPipelineByPropertyName="true"/>
+            </RegularQuery>
+          </Property>
+          <Property PropertyName="RevisionNumber">
+            <Type PSType="System.UInt32" />
+            <RegularQuery AllowGlobbing="true">
+              <CmdletParameterMetadata Position="0" IsMandatory="false"  ValueFromPipelineByPropertyName="true"/>
+            </RegularQuery>
+          </Property>
+        </QueryableProperties>
+      </GetCmdletParameters>
+    </InstanceCmdlets>    
+  </Class>
+</PowerShellMetadata>

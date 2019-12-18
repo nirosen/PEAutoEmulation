@@ -1,0 +1,3 @@
+<sysprepInformation><imaging exclude=""><assemblyIdentity name="Microsoft-Windows-PnpSysprep" version="10.0.18362.1" publicKeyToken="31bf3856ad364e35" processorArchitecture="x86" versionScope="NonSxS"></assemblyIdentity>
+<sysprepOrder order="0x0100"></sysprepOrder>
+<sysprepModule methodName="Sysprep_Respecialize_Pnp" moduleName="$(runtime.system32)\sppnp.dll"></sysprepModule></imaging></sysprepInformation>

@@ -1,0 +1,1248 @@
+<?xml version= "1.0" encoding="utf-8"?>
+<grammar mode="voice" root="DictationGrammars_SpeechRoot" tag-format="semantics/1.0" version="1.0" xml:lang="en-us" xmlns="http://www.w3.org/2001/06/grammar" xmlns:sapi="http://schemas.microsoft.com/Speech/2002/06/SRGSExtensions">
+
+    <rule id="l_">
+        <item>
+            <item>select</item>
+            <ruleref uri="#c_"/>
+        </item>
+        <tag>out.l_domain_="DictationCommands";out.l_intent_="SelectUnit";if(rules.c_!=null){out.c_UnitSelection=rules.c_;}if(rules.g_!=null){out.g_Direction=rules.g_;}if(rules.d_!=null){out.d_Number=rules.d_;}if(rules.b_!=null){out.b_Unit=rules.b_;}if(rules.i_!=null){out.i_NumberUnit=rules.i_;}if(rules.e_!=null){out.e_StartEnd=rules.e_;}if(rules.f_!=null){out.f_TopBottom=rules.f_;}</tag>
+    </rule>
+
+    <rule id="c_">
+        <one-of>
+            <item weight="1">
+                <item repeat="0-1">
+                    <item>the</item>
+                </item>
+                <ruleref uri="#g_"/>
+                <item repeat="0-1">
+                    <ruleref uri="#d_"/>
+                </item>
+                <ruleref uri="#b_"/>
+                <tag>out=rules.latest()</tag>
+            </item>
+            <item weight="1">
+                <item repeat="0-1">
+                    <item>the</item>
+                </item>
+                <ruleref uri="#g_"/>
+                <ruleref uri="#i_"/>
+                <tag>out=rules.latest()</tag>
+            </item>
+            <item weight="1">
+                <item repeat="0-1">
+                    <item>the</item>
+                </item>
+                <ruleref uri="#d_"/>
+                <ruleref uri="#g_"/>
+                <ruleref uri="#b_"/>
+                <tag>out=rules.latest()</tag>
+            </item>
+            <item weight="1">
+                <item repeat="0-1">
+                    <one-of>
+                        <item>one</item>
+                        <item>a</item>
+                        <item>
+                            <item repeat="0-1">
+                                <item>the</item>
+                            </item>
+                            <item>entire</item>
+                        </item>
+                        <item>current</item>
+                    </one-of>
+                </item>
+                <ruleref uri="#b_"/>
+                <tag>out=rules.latest()</tag>
+            </item>
+            <item weight="1">
+                <ruleref uri="#e_"/>
+                <ruleref uri="#b_"/>
+                <tag>out=rules.latest()</tag>
+            </item>
+            <item weight="1">
+                <ruleref uri="#f_"/>
+                <ruleref uri="#b_"/>
+                <tag>out=rules.latest()</tag>
+            </item>
+        </one-of>
+    </rule>
+
+    <rule id="f_">
+        <one-of>
+            <item>
+                <item weight="1">to</item>
+                <item repeat="0-1">
+                    <item>the</item>
+                </item>
+                <item>top</item>
+                <item repeat="0-1">
+                    <item>of</item>
+                    <item repeat="0-1">
+                        <item>the</item>
+                    </item>
+                </item>
+                <tag>out="3"</tag>
+            </item>
+            <item>
+                <item weight="1">to</item>
+                <item repeat="0-1">
+                    <item>the</item>
+                </item>
+                <item>bottom</item>
+                <item repeat="0-1">
+                    <item>of</item>
+                    <item repeat="0-1">
+                        <item>the</item>
+                    </item>
+                </item>
+                <tag>out="4"</tag>
+            </item>
+        </one-of>
+    </rule>
+
+    <rule id="e_">
+        <one-of>
+            <item>
+                <item weight="1">to</item>
+                <item repeat="0-1">
+                    <item>the</item>
+                </item>
+                <item>start of</item>
+                <item repeat="0-1">
+                    <item>the</item>
+                </item>
+                <tag>out="3"</tag>
+            </item>
+            <item>
+                <item weight="1">to</item>
+                <item repeat="0-1">
+                    <item>the</item>
+                </item>
+                <item>end of</item>
+                <item repeat="0-1">
+                    <item>the</item>
+                </item>
+                <tag>out="4"</tag>
+            </item>
+        </one-of>
+    </rule>
+
+    <rule id="i_">
+        <item>
+            forwards<tag>out="1"</tag>
+        </item>
+    </rule>
+
+    <rule id="b_">
+        <one-of>
+            <item weight="1">
+                <one-of>
+                    <item>letter</item>
+                    <item>letters</item>
+                </one-of>
+                <tag>out="3"</tag>
+            </item>
+            <item weight="1">
+                <one-of>
+                    <item>character</item>
+                    <item>characters</item>
+                </one-of>
+                <tag>out="3"</tag>
+            </item>
+            <item weight="1">
+                <one-of>
+                    <item>word</item>
+                    <item>words</item>
+                </one-of>
+                <tag>out="4"</tag>
+            </item>
+            <item weight="1">
+                <one-of>
+                    <item>document</item>
+                    <item>all</item>
+                    <item>
+                        <item repeat="0-1">
+                            <item>the</item>
+                            <item repeat="0-1">
+                                <item>entire</item>
+                            </item>
+                        </item>
+                        <item>text</item>
+                    </item>
+                </one-of>
+                <tag>out="7"</tag>
+            </item>
+            <item weight="1">
+                <one-of>
+                    <item>paragraph</item>
+                    <item>paragraphs</item>
+                </one-of>
+                <tag>out="6"</tag>
+            </item>
+        </one-of>
+    </rule>
+
+    <rule id="d_">
+        <one-of>
+            <item weight="1">
+                <one-of>
+                    <item>one</item>
+                    <item>1</item>
+                </one-of>
+                <tag>out="1"</tag>
+            </item>
+            <item weight="1">
+                <one-of>
+                    <item>to</item>
+                    <item>two</item>
+                    <item>2</item>
+                </one-of>
+                <tag>out="2"</tag>
+            </item>
+            <item weight="1">
+                <one-of>
+                    <item>three</item>
+                    <item>3</item>
+                </one-of>
+                <tag>out="3"</tag>
+            </item>
+            <item weight="1">
+                <one-of>
+                    <item>four</item>
+                    <item>for</item>
+                    <item>4</item>
+                </one-of>
+                <tag>out="4"</tag>
+            </item>
+            <item weight="1">
+                <one-of>
+                    <item>five</item>
+                    <item>5</item>
+                </one-of>
+                <tag>out="5"</tag>
+            </item>
+            <item weight="1">
+                <one-of>
+                    <item>six</item>
+                    <item>6</item>
+                </one-of>
+                <tag>out="6"</tag>
+            </item>
+            <item weight="1">
+                <one-of>
+                    <item>seven</item>
+                    <item>7</item>
+                </one-of>
+                <tag>out="7"</tag>
+            </item>
+            <item weight="1">
+                <one-of>
+                    <item>eight</item>
+                    <item>8</item>
+                </one-of>
+                <tag>out="8"</tag>
+            </item>
+            <item weight="1">
+                <one-of>
+                    <item>nine</item>
+                    <item>9</item>
+                </one-of>
+                <tag>out="9"</tag>
+            </item>
+            <item weight="1">
+                <one-of>
+                    <item>ten</item>
+                    <item>10</item>
+                </one-of>
+                <tag>out="10"</tag>
+            </item>
+            <item weight="1">
+                <one-of>
+                    <item>eleven</item>
+                    <item>11</item>
+                </one-of>
+                <tag>out="11"</tag>
+            </item>
+            <item weight="1">
+                <one-of>
+                    <item>twelve</item>
+                    <item>12</item>
+                </one-of>
+                <tag>out="12"</tag>
+            </item>
+            <item weight="1">
+                <one-of>
+                    <item>thirteen</item>
+                    <item>13</item>
+                </one-of>
+                <tag>out="13"</tag>
+            </item>
+            <item weight="1">
+                <one-of>
+                    <item>fourteen</item>
+                    <item>14</item>
+                </one-of>
+                <tag>out="14"</tag>
+            </item>
+            <item weight="1">
+                <one-of>
+                    <item>fifteen</item>
+                    <item>15</item>
+                </one-of>
+                <tag>out="15"</tag>
+            </item>
+        </one-of>
+    </rule>
+
+    <rule id="g_">
+        <one-of>
+            <item weight="1">
+                <one-of>
+                    <item>previous</item>
+                    <item>last</item>
+                </one-of>
+                <tag>out="1"</tag>
+            </item>
+            <item>
+                next<tag>out="2"</tag>
+            </item>
+        </one-of>
+    </rule>
+
+    <rule id="m_">
+        <item>
+            <item>select</item>
+            <ruleref uri="#c_"/>
+        </item>
+        <tag>out.m_domain_="DictationCommands";out.m_intent_="SelectUnit";if(rules.c_!=null){out.c_UnitSelection=rules.c_;}if(rules.g_!=null){out.g_Direction=rules.g_;}if(rules.d_!=null){out.d_Number=rules.d_;}if(rules.b_!=null){out.b_Unit=rules.b_;}if(rules.i_!=null){out.i_NumberUnit=rules.i_;}if(rules.e_!=null){out.e_StartEnd=rules.e_;}if(rules.f_!=null){out.f_TopBottom=rules.f_;}</tag>
+    </rule>
+
+    <rule id="n_">
+        <item>
+            <item>select</item>
+            <ruleref uri="#h_"/>
+        </item>
+        <tag>out.n_domain_="DictationCommands";out.n_intent_="SelectThat";if(rules.h_!=null){out.h_That=rules.h_;}</tag>
+    </rule>
+
+    <rule id="h_">
+        <item>
+            that<tag>out="1"</tag>
+        </item>
+    </rule>
+
+    <rule id="o_">
+        <item>
+            <item>select</item>
+            <ruleref uri="#h_"/>
+        </item>
+        <tag>out.o_domain_="DictationCommands";out.o_intent_="SelectThat";if(rules.h_!=null){out.h_That=rules.h_;}</tag>
+    </rule>
+
+    <rule id="p_">
+        <item>
+            <item>delete</item>
+            <item repeat="0-1">
+                <item>the</item>
+                <item>entire</item>
+            </item>
+            <ruleref uri="#c_"/>
+        </item>
+        <tag>out.p_domain_="DictationCommands";out.p_intent_="DeleteUnit";if(rules.c_!=null){out.c_UnitSelection=rules.c_;}if(rules.g_!=null){out.g_Direction=rules.g_;}if(rules.d_!=null){out.d_Number=rules.d_;}if(rules.b_!=null){out.b_Unit=rules.b_;}if(rules.i_!=null){out.i_NumberUnit=rules.i_;}if(rules.e_!=null){out.e_StartEnd=rules.e_;}if(rules.f_!=null){out.f_TopBottom=rules.f_;}</tag>
+    </rule>
+
+    <rule id="q_">
+        <item>
+            <item>delete</item>
+            <item repeat="0-1">
+                <item>the</item>
+                <item>entire</item>
+            </item>
+            <ruleref uri="#c_"/>
+        </item>
+        <tag>out.q_domain_="DictationCommands";out.q_intent_="DeleteUnit";if(rules.c_!=null){out.c_UnitSelection=rules.c_;}if(rules.g_!=null){out.g_Direction=rules.g_;}if(rules.d_!=null){out.d_Number=rules.d_;}if(rules.b_!=null){out.b_Unit=rules.b_;}if(rules.i_!=null){out.i_NumberUnit=rules.i_;}if(rules.e_!=null){out.e_StartEnd=rules.e_;}if(rules.f_!=null){out.f_TopBottom=rules.f_;}</tag>
+    </rule>
+
+    <rule id="r_">
+        <item>
+            <one-of>
+                <item>delete</item>
+                <item>strike</item>
+            </one-of>
+            <ruleref uri="#h_"/>
+        </item>
+        <tag>out.r_domain_="DictationCommands";out.r_intent_="DeleteThat";if(rules.h_!=null){out.h_That=rules.h_;}</tag>
+    </rule>
+
+    <rule id="s_">
+        <item>
+            <one-of>
+                <item>delete</item>
+                <item>strike</item>
+            </one-of>
+            <ruleref uri="#h_"/>
+        </item>
+        <tag>out.s_domain_="DictationCommands";out.s_intent_="DeleteThat";if(rules.h_!=null){out.h_That=rules.h_;}</tag>
+    </rule>
+
+    <rule id="t_">
+        <item>
+            <one-of>
+                <item>undo</item>
+                <item>scratch</item>
+            </one-of>
+            <ruleref uri="#h_"/>
+        </item>
+        <tag>out.t_domain_="DictationCommands";out.t_intent_="UndoThat";if(rules.h_!=null){out.h_That=rules.h_;}</tag>
+    </rule>
+
+    <rule id="u_">
+        <item>
+            <one-of>
+                <item>undo</item>
+                <item>scratch</item>
+            </one-of>
+            <ruleref uri="#h_"/>
+        </item>
+        <tag>out.u_domain_="DictationCommands";out.u_intent_="UndoThat";if(rules.h_!=null){out.h_That=rules.h_;}</tag>
+    </rule>
+
+    <rule id="v_">
+        <one-of>
+            <item>clear selection</item>
+            <item>unselect that</item>
+        </one-of>
+        <tag>out.v_domain_="DictationCommands";out.v_intent_="ClearSelection";</tag>
+    </rule>
+
+    <rule id="w_">
+        <one-of>
+            <item>clear selection</item>
+            <item>unselect that</item>
+        </one-of>
+        <tag>out.w_domain_="DictationCommands";out.w_intent_="ClearSelection";</tag>
+    </rule>
+
+    <rule id="x_">
+        <item>
+            <one-of>
+                <item>go</item>
+                <item>move</item>
+            </one-of>
+            <item>to</item>
+            <item repeat="0-1">
+                <item>the</item>
+            </item>
+            <one-of>
+                <item>start</item>
+                <item>beginning</item>
+            </one-of>
+            <item>of</item>
+            <item repeat="0-1">
+                <item>the</item>
+            </item>
+            <ruleref uri="#b_"/>
+        </item>
+        <tag>out.x_domain_="DictationCommands";out.x_intent_="GoToStartOfUnit";if(rules.b_!=null){out.b_Unit=rules.b_;}</tag>
+    </rule>
+
+    <rule id="y_">
+        <item>
+            <one-of>
+                <item>go</item>
+                <item>move</item>
+            </one-of>
+            <item>to</item>
+            <item repeat="0-1">
+                <item>the</item>
+            </item>
+            <one-of>
+                <item>start</item>
+                <item>beginning</item>
+            </one-of>
+            <item>of</item>
+            <item repeat="0-1">
+                <item>the</item>
+            </item>
+            <ruleref uri="#b_"/>
+        </item>
+        <tag>out.y_domain_="DictationCommands";out.y_intent_="GoToStartOfUnit";if(rules.b_!=null){out.b_Unit=rules.b_;}</tag>
+    </rule>
+
+    <rule id="z_">
+        <item>
+            <one-of>
+                <item>go</item>
+                <item>move</item>
+            </one-of>
+            <item>to</item>
+            <item repeat="0-1">
+                <item>the</item>
+            </item>
+            <item>end of</item>
+            <item repeat="0-1">
+                <item>the</item>
+            </item>
+            <ruleref uri="#b_"/>
+        </item>
+        <tag>out.z_domain_="DictationCommands";out.z_intent_="GoToEndOfUnit";if(rules.b_!=null){out.b_Unit=rules.b_;}</tag>
+    </rule>
+
+    <rule id="A_">
+        <item>
+            <one-of>
+                <item>go</item>
+                <item>move</item>
+            </one-of>
+            <item>to</item>
+            <item repeat="0-1">
+                <item>the</item>
+            </item>
+            <item>end of</item>
+            <item repeat="0-1">
+                <item>the</item>
+            </item>
+            <ruleref uri="#b_"/>
+        </item>
+        <tag>out.A_domain_="DictationCommands";out.A_intent_="GoToEndOfUnit";if(rules.b_!=null){out.b_Unit=rules.b_;}</tag>
+    </rule>
+
+    <rule id="B_">
+        <one-of>
+            <item>
+                <one-of>
+                    <item>go</item>
+                    <item>move</item>
+                </one-of>
+                <one-of>
+                    <item>
+                        <item>forward</item>
+                        <item repeat="0-1">
+                            <item repeat="0-1">
+                                <item>to</item>
+                            </item>
+                            <item repeat="0-1">
+                                <item>the</item>
+                            </item>
+                            <item>next</item>
+                        </item>
+                    </item>
+                    <item>
+                        <item>down</item>
+                        <item repeat="0-1">
+                            <item repeat="0-1">
+                                <item>to</item>
+                            </item>
+                            <item repeat="0-1">
+                                <item>the</item>
+                            </item>
+                            <item>next</item>
+                        </item>
+                    </item>
+                    <item>
+                        <item repeat="0-1">
+                            <item>to</item>
+                        </item>
+                        <item repeat="0-1">
+                            <item>the</item>
+                        </item>
+                        <item>next</item>
+                    </item>
+                </one-of>
+                <item repeat="0-1">
+                    <ruleref uri="#d_"/>
+                </item>
+                <ruleref uri="#b_"/>
+            </item>
+            <item>
+                <one-of>
+                    <item>go</item>
+                    <item>move</item>
+                </one-of>
+                <one-of>
+                    <item>
+                        <item>forward</item>
+                        <item repeat="0-1">
+                            <item repeat="0-1">
+                                <item>to</item>
+                            </item>
+                            <item repeat="0-1">
+                                <item>the</item>
+                            </item>
+                            <item>next</item>
+                        </item>
+                    </item>
+                    <item>
+                        <item>down</item>
+                        <item repeat="0-1">
+                            <item repeat="0-1">
+                                <item>to</item>
+                            </item>
+                            <item repeat="0-1">
+                                <item>the</item>
+                            </item>
+                            <item>next</item>
+                        </item>
+                    </item>
+                    <item>
+                        <item repeat="0-1">
+                            <item>to</item>
+                        </item>
+                        <item repeat="0-1">
+                            <item>the</item>
+                        </item>
+                        <item>next</item>
+                    </item>
+                </one-of>
+                <ruleref uri="#i_"/>
+            </item>
+        </one-of>
+        <tag>out.B_domain_="DictationCommands";out.B_intent_="GoForwardUnit";if(rules.d_!=null){out.d_Number=rules.d_;}if(rules.b_!=null){out.b_Unit=rules.b_;}if(rules.i_!=null){out.i_NumberUnit=rules.i_;}</tag>
+    </rule>
+
+    <rule id="C_">
+        <one-of>
+            <item>
+                <one-of>
+                    <item>go</item>
+                    <item>move</item>
+                </one-of>
+                <one-of>
+                    <item>
+                        <item>forward</item>
+                        <item repeat="0-1">
+                            <item repeat="0-1">
+                                <item>to</item>
+                            </item>
+                            <item repeat="0-1">
+                                <item>the</item>
+                            </item>
+                            <item>next</item>
+                        </item>
+                    </item>
+                    <item>
+                        <item>down</item>
+                        <item repeat="0-1">
+                            <item repeat="0-1">
+                                <item>to</item>
+                            </item>
+                            <item repeat="0-1">
+                                <item>the</item>
+                            </item>
+                            <item>next</item>
+                        </item>
+                    </item>
+                    <item>
+                        <item repeat="0-1">
+                            <item>to</item>
+                        </item>
+                        <item repeat="0-1">
+                            <item>the</item>
+                        </item>
+                        <item>next</item>
+                    </item>
+                </one-of>
+                <item repeat="0-1">
+                    <ruleref uri="#d_"/>
+                </item>
+                <ruleref uri="#b_"/>
+            </item>
+            <item>
+                <one-of>
+                    <item>go</item>
+                    <item>move</item>
+                </one-of>
+                <one-of>
+                    <item>
+                        <item>forward</item>
+                        <item repeat="0-1">
+                            <item repeat="0-1">
+                                <item>to</item>
+                            </item>
+                            <item repeat="0-1">
+                                <item>the</item>
+                            </item>
+                            <item>next</item>
+                        </item>
+                    </item>
+                    <item>
+                        <item>down</item>
+                        <item repeat="0-1">
+                            <item repeat="0-1">
+                                <item>to</item>
+                            </item>
+                            <item repeat="0-1">
+                                <item>the</item>
+                            </item>
+                            <item>next</item>
+                        </item>
+                    </item>
+                    <item>
+                        <item repeat="0-1">
+                            <item>to</item>
+                        </item>
+                        <item repeat="0-1">
+                            <item>the</item>
+                        </item>
+                        <item>next</item>
+                    </item>
+                </one-of>
+                <ruleref uri="#i_"/>
+            </item>
+        </one-of>
+        <tag>out.C_domain_="DictationCommands";out.C_intent_="GoForwardUnit";if(rules.d_!=null){out.d_Number=rules.d_;}if(rules.b_!=null){out.b_Unit=rules.b_;}if(rules.i_!=null){out.i_NumberUnit=rules.i_;}</tag>
+    </rule>
+
+    <rule id="D_">
+        <one-of>
+            <item>
+                <one-of>
+                    <item>go</item>
+                    <item>move</item>
+                </one-of>
+                <one-of>
+                    <item>
+                        <item>back</item>
+                        <item repeat="0-1">
+                            <item repeat="0-1">
+                                <item>to</item>
+                            </item>
+                            <item repeat="0-1">
+                                <item>the</item>
+                            </item>
+                            <item>previous</item>
+                        </item>
+                    </item>
+                    <item>
+                        <item>up</item>
+                        <item repeat="0-1">
+                            <item repeat="0-1">
+                                <item>to</item>
+                            </item>
+                            <item repeat="0-1">
+                                <item>the</item>
+                            </item>
+                            <item>previous</item>
+                        </item>
+                    </item>
+                    <item>
+                        <item repeat="0-1">
+                            <item>to</item>
+                        </item>
+                        <item repeat="0-1">
+                            <item>the</item>
+                        </item>
+                        <item>previous</item>
+                    </item>
+                </one-of>
+                <item repeat="0-1">
+                    <ruleref uri="#d_"/>
+                </item>
+                <ruleref uri="#b_"/>
+            </item>
+            <item>
+                <one-of>
+                    <item>go</item>
+                    <item>move</item>
+                </one-of>
+                <one-of>
+                    <item>
+                        <item>back</item>
+                        <item repeat="0-1">
+                            <item repeat="0-1">
+                                <item>to</item>
+                            </item>
+                            <item repeat="0-1">
+                                <item>the</item>
+                            </item>
+                            <item>previous</item>
+                        </item>
+                    </item>
+                    <item>
+                        <item>up</item>
+                        <item repeat="0-1">
+                            <item repeat="0-1">
+                                <item>to</item>
+                            </item>
+                            <item repeat="0-1">
+                                <item>the</item>
+                            </item>
+                            <item>previous</item>
+                        </item>
+                    </item>
+                    <item>
+                        <item repeat="0-1">
+                            <item>to</item>
+                        </item>
+                        <item repeat="0-1">
+                            <item>the</item>
+                        </item>
+                        <item>previous</item>
+                    </item>
+                </one-of>
+                <ruleref uri="#i_"/>
+            </item>
+        </one-of>
+        <tag>out.D_domain_="DictationCommands";out.D_intent_="GoBackwardUnit";if(rules.d_!=null){out.d_Number=rules.d_;}if(rules.b_!=null){out.b_Unit=rules.b_;}if(rules.i_!=null){out.i_NumberUnit=rules.i_;}</tag>
+    </rule>
+
+    <rule id="E_">
+        <one-of>
+            <item>
+                <one-of>
+                    <item>go</item>
+                    <item>move</item>
+                </one-of>
+                <one-of>
+                    <item>
+                        <item>back</item>
+                        <item repeat="0-1">
+                            <item repeat="0-1">
+                                <item>to</item>
+                            </item>
+                            <item repeat="0-1">
+                                <item>the</item>
+                            </item>
+                            <item>previous</item>
+                        </item>
+                    </item>
+                    <item>
+                        <item>up</item>
+                        <item repeat="0-1">
+                            <item repeat="0-1">
+                                <item>to</item>
+                            </item>
+                            <item repeat="0-1">
+                                <item>the</item>
+                            </item>
+                            <item>previous</item>
+                        </item>
+                    </item>
+                    <item>
+                        <item repeat="0-1">
+                            <item>to</item>
+                        </item>
+                        <item repeat="0-1">
+                            <item>the</item>
+                        </item>
+                        <item>previous</item>
+                    </item>
+                </one-of>
+                <item repeat="0-1">
+                    <ruleref uri="#d_"/>
+                </item>
+                <ruleref uri="#b_"/>
+            </item>
+            <item>
+                <one-of>
+                    <item>go</item>
+                    <item>move</item>
+                </one-of>
+                <one-of>
+                    <item>
+                        <item>back</item>
+                        <item repeat="0-1">
+                            <item repeat="0-1">
+                                <item>to</item>
+                            </item>
+                            <item repeat="0-1">
+                                <item>the</item>
+                            </item>
+                            <item>previous</item>
+                        </item>
+                    </item>
+                    <item>
+                        <item>up</item>
+                        <item repeat="0-1">
+                            <item repeat="0-1">
+                                <item>to</item>
+                            </item>
+                            <item repeat="0-1">
+                                <item>the</item>
+                            </item>
+                            <item>previous</item>
+                        </item>
+                    </item>
+                    <item>
+                        <item repeat="0-1">
+                            <item>to</item>
+                        </item>
+                        <item repeat="0-1">
+                            <item>the</item>
+                        </item>
+                        <item>previous</item>
+                    </item>
+                </one-of>
+                <ruleref uri="#i_"/>
+            </item>
+        </one-of>
+        <tag>out.E_domain_="DictationCommands";out.E_intent_="GoBackwardUnit";if(rules.d_!=null){out.d_Number=rules.d_;}if(rules.b_!=null){out.b_Unit=rules.b_;}if(rules.i_!=null){out.i_NumberUnit=rules.i_;}</tag>
+    </rule>
+
+    <rule id="F_">
+        <item>
+            <one-of>
+                <item>go</item>
+                <item>move</item>
+            </one-of>
+            <one-of>
+                <item>before</item>
+                <item>
+                    <item>to</item>
+                    <item repeat="0-1">
+                        <item>the</item>
+                    </item>
+                    <item>start of</item>
+                </item>
+            </one-of>
+            <ruleref uri="#h_"/>
+        </item>
+        <tag>out.F_domain_="DictationCommands";out.F_intent_="GoBeforeThat";if(rules.h_!=null){out.h_That=rules.h_;}</tag>
+    </rule>
+
+    <rule id="G_">
+        <item>
+            <one-of>
+                <item>go</item>
+                <item>move</item>
+            </one-of>
+            <one-of>
+                <item>before</item>
+                <item>
+                    <item>to</item>
+                    <item repeat="0-1">
+                        <item>the</item>
+                    </item>
+                    <item>start of</item>
+                </item>
+            </one-of>
+            <ruleref uri="#h_"/>
+        </item>
+        <tag>out.G_domain_="DictationCommands";out.G_intent_="GoBeforeThat";if(rules.h_!=null){out.h_That=rules.h_;}</tag>
+    </rule>
+
+    <rule id="H_">
+        <item>
+            <one-of>
+                <item>go</item>
+                <item>move</item>
+            </one-of>
+            <one-of>
+                <item>after</item>
+                <item>
+                    <item>to</item>
+                    <item repeat="0-1">
+                        <item>the</item>
+                    </item>
+                    <item>end of</item>
+                </item>
+            </one-of>
+            <ruleref uri="#h_"/>
+        </item>
+        <tag>out.H_domain_="DictationCommands";out.H_intent_="GoAfterThat";if(rules.h_!=null){out.h_That=rules.h_;}</tag>
+    </rule>
+
+    <rule id="I_">
+        <item>
+            <one-of>
+                <item>go</item>
+                <item>move</item>
+            </one-of>
+            <one-of>
+                <item>after</item>
+                <item>
+                    <item>to</item>
+                    <item repeat="0-1">
+                        <item>the</item>
+                    </item>
+                    <item>end of</item>
+                </item>
+            </one-of>
+            <ruleref uri="#h_"/>
+        </item>
+        <tag>out.I_domain_="DictationCommands";out.I_intent_="GoAfterThat";if(rules.h_!=null){out.h_That=rules.h_;}</tag>
+    </rule>
+
+    <rule id="J_ZZZPreserve">
+        <item>
+            <item>select</item>
+            <ruleref uri="#k_"/>
+        </item>
+        <tag>out.J_domain_="DictationCommands";out.J_intent_="SelectBuffer";if(rules.k_!=null){out.k_Buffer=rules.k_;out._dictation_k_="DICTATION";}</tag>
+    </rule>
+
+    <rule id="k_">
+        <item>
+            <ruleref special="GARBAGE"/>
+            <tag>out=rules.latest();</tag>
+        </item>
+    </rule>
+
+    <rule id="K_ZZZPreserve">
+        <item>
+            <item>select</item>
+            <ruleref uri="#k_"/>
+        </item>
+        <tag>out.K_domain_="DictationCommands";out.K_intent_="SelectBuffer";if(rules.k_!=null){out.k_Buffer=rules.k_;out._dictation_k_="DICTATION";}</tag>
+    </rule>
+
+    <rule id="L_ZZZPreserve">
+        <item>
+            <one-of>
+                <item>go</item>
+                <item>move</item>
+            </one-of>
+            <one-of>
+                <item>after</item>
+                <item>
+                    <item>to</item>
+                    <item repeat="0-1">
+                        <item>the</item>
+                    </item>
+                    <item>end of</item>
+                </item>
+            </one-of>
+            <ruleref uri="#k_"/>
+        </item>
+        <tag>out.L_domain_="DictationCommands";out.L_intent_="GoAfterBuffer";if(rules.k_!=null){out.k_Buffer=rules.k_;out._dictation_k_="DICTATION";}</tag>
+    </rule>
+
+    <rule id="M_ZZZPreserve">
+        <item>
+            <one-of>
+                <item>go</item>
+                <item>move</item>
+            </one-of>
+            <one-of>
+                <item>after</item>
+                <item>
+                    <item>to</item>
+                    <item repeat="0-1">
+                        <item>the</item>
+                    </item>
+                    <item>end of</item>
+                </item>
+            </one-of>
+            <ruleref uri="#k_"/>
+        </item>
+        <tag>out.M_domain_="DictationCommands";out.M_intent_="GoAfterBuffer";if(rules.k_!=null){out.k_Buffer=rules.k_;out._dictation_k_="DICTATION";}</tag>
+    </rule>
+
+    <rule id="N_ZZZPreserve">
+        <item>
+            <one-of>
+                <item>go</item>
+                <item>move</item>
+            </one-of>
+            <one-of>
+                <item>before</item>
+                <item>
+                    <item>to</item>
+                    <item repeat="0-1">
+                        <item>the</item>
+                    </item>
+                    <item>start of</item>
+                </item>
+            </one-of>
+            <ruleref uri="#k_"/>
+        </item>
+        <tag>out.N_domain_="DictationCommands";out.N_intent_="GoBeforeBuffer";if(rules.k_!=null){out.k_Buffer=rules.k_;out._dictation_k_="DICTATION";}</tag>
+    </rule>
+
+    <rule id="O_ZZZPreserve">
+        <item>
+            <one-of>
+                <item>go</item>
+                <item>move</item>
+            </one-of>
+            <one-of>
+                <item>before</item>
+                <item>
+                    <item>to</item>
+                    <item repeat="0-1">
+                        <item>the</item>
+                    </item>
+                    <item>start of</item>
+                </item>
+            </one-of>
+            <ruleref uri="#k_"/>
+        </item>
+        <tag>out.O_domain_="DictationCommands";out.O_intent_="GoBeforeBuffer";if(rules.k_!=null){out.k_Buffer=rules.k_;out._dictation_k_="DICTATION";}</tag>
+    </rule>
+
+    <rule id="P_">
+        <one-of>
+            <item>
+                <one-of>
+                    <item>stop</item>
+                    <item>end</item>
+                </one-of>
+                <one-of>
+                    <item>dictating</item>
+                    <item>dictation</item>
+                </one-of>
+            </item>
+            <item>done</item>
+        </one-of>
+        <tag>out.P_domain_="DictationCommands";out.P_intent_="EndDictation";</tag>
+    </rule>
+
+    <rule id="Q_">
+        <one-of>
+            <item>
+                <one-of>
+                    <item>stop</item>
+                    <item>end</item>
+                </one-of>
+                <one-of>
+                    <item>dictating</item>
+                    <item>dictation</item>
+                </one-of>
+            </item>
+            <item>done</item>
+        </one-of>
+        <tag>out.Q_domain_="DictationCommands";out.Q_intent_="EndDictation";</tag>
+    </rule>
+
+    <rule id="R_">
+        <item>
+            <one-of>
+                <item>start</item>
+                <item>activate</item>
+            </one-of>
+            <item>spelling</item>
+        </item>
+        <tag>out.R_domain_="DictationCommands";out.R_intent_="StartSpelling";</tag>
+    </rule>
+
+    <rule id="S_">
+        <item>
+            <one-of>
+                <item>start</item>
+                <item>activate</item>
+            </one-of>
+            <item>spelling</item>
+        </item>
+        <tag>out.S_domain_="DictationCommands";out.S_intent_="StartSpelling";</tag>
+    </rule>
+
+    <rule id="T_">
+        <item>
+            <item repeat="0-1">
+                <one-of>
+                    <item>tap</item>
+                    <item>press</item>
+                </one-of>
+            </item>
+            <ruleref uri="#j_"/>
+        </item>
+        <tag>out.T_domain_="DictationCommands";out.T_intent_="Keystrokes";if(rules.j_!=null){out.j_Keys=rules.j_;}</tag>
+    </rule>
+
+    <rule id="j_">
+        <one-of>
+            <item>
+                tab<tag>out="1"</tag>
+            </item>
+            <item>
+                enter<tag>out="2"</tag>
+            </item>
+            <item>
+                end<tag>out="3"</tag>
+            </item>
+            <item>
+                home<tag>out="4"</tag>
+            </item>
+            <item>
+                page up<tag>out="5"</tag>
+            </item>
+            <item>
+                page down<tag>out="6"</tag>
+            </item>
+            <item>
+                backspace<tag>out="7"</tag>
+            </item>
+            <item>
+                delete<tag>out="8"</tag>
+            </item>
+        </one-of>
+    </rule>
+
+    <rule id="U_">
+        <item>
+            <item repeat="0-1">
+                <one-of>
+                    <item>tap</item>
+                    <item>press</item>
+                </one-of>
+            </item>
+            <ruleref uri="#j_"/>
+        </item>
+        <tag>out.U_domain_="DictationCommands";out.U_intent_="Keystrokes";if(rules.j_!=null){out.j_Keys=rules.j_;}</tag>
+    </rule>
+
+    <rule id="DictationGrammars_SpeechRoot" scope="public">
+        <item>
+            <one-of>
+                <item>
+                    <ruleref uri="#l_"/>
+                </item>
+                <item>
+                    <ruleref uri="#n_"/>
+                </item>
+                <item>
+                    <ruleref uri="#p_"/>
+                </item>
+                <item>
+                    <ruleref uri="#r_"/>
+                </item>
+                <item>
+                    <ruleref uri="#t_"/>
+                </item>
+                <item>
+                    <ruleref uri="#v_"/>
+                </item>
+                <item>
+                    <ruleref uri="#x_"/>
+                </item>
+                <item>
+                    <ruleref uri="#z_"/>
+                </item>
+                <item>
+                    <ruleref uri="#B_"/>
+                </item>
+                <item>
+                    <ruleref uri="#D_"/>
+                </item>
+                <item>
+                    <ruleref uri="#F_"/>
+                </item>
+                <item>
+                    <ruleref uri="#H_"/>
+                </item>
+                <item>
+                    <ruleref uri="#J_ZZZPreserve"/>
+                </item>
+                <item>
+                    <ruleref uri="#L_ZZZPreserve"/>
+                </item>
+                <item>
+                    <ruleref uri="#N_ZZZPreserve"/>
+                </item>
+                <item>
+                    <ruleref uri="#P_"/>
+                </item>
+                <item>
+                    <ruleref uri="#R_"/>
+                </item>
+                <item>
+                    <ruleref uri="#T_"/>
+                </item>
+            </one-of>
+            <tag>out.rule=rules.latest();</tag>
+        </item>
+        <tag>out=out.rule;</tag>
+    </rule>
+</grammar>

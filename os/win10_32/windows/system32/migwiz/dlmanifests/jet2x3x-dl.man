@@ -1,0 +1,90 @@
+﻿<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<assembly
+    xmlns="urn:schemas-microsoft-com:asm.v3"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    authors="leewoods"
+    buildFilter=""
+    company="Microsoft Corporation"
+    copyright=""
+    creationTimeStamp="2003-11-18T11:27:15.1013997-08:00"
+    description="$(resourceString.description)"
+    displayName="$(resourceString.displayName)"
+    lastUpdateTimeStamp="2005-05-23T17:52:30.5266131-07:00"
+    manifestVersion="1.0"
+    owners="leewoods"
+    supportInformation="http://support.microsoft.com"
+    testers="curtisd, davcasey"
+    >
+  <assemblyIdentity
+      language="neutral"
+      name="Microsoft-Windows-Microsoft-Data-Access-Components-Jet2x3x-DL"
+      processorArchitecture="*"
+      version="0.0.0.0"
+      />
+  <migration>
+    <migXml xmlns="">
+      <detects>
+        <detect>
+          <condition>MigXmlHelper.IsOSEarlierThan("NT","6.0.0.0")</condition>
+        </detect>
+      </detects>
+      <rules context="System">
+        <include>
+          <objectSet>
+            <!--Jet Bug 18205 "HKEY_LOCAL_MACHINE” is not valid in migXml patterns; use “HKLM” instead (8-2-06 missed first one, fixed) -->
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 2.x [ForceCP]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 2.x [ReadAheadPages]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 2.x [MaxBufferSize]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 2.x [LockRetry]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 2.x [CommitLockRetry]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 2.x [PageTimeout]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 2.x [LockedPageTimeout]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 2.x [CursorTimeout]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 2.x [IdleFrequency]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 2.x [ForceOSFlush]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 3.x [PageTimeout]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 3.x [LockRetry]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 3.x [MaxBufferSize]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 3.x [Threads]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 3.x [ExclusiveAsyncDelay]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 3.x [SharedAsyncDelay]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 3.x [FlushTransactionTimeout]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 3.x [MaxLocksPerFile]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 3.x [LockDelay]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 3.x [RecycleLVs]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 3.x [UserCommitSync]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 3.x [ImplicitCommitSync]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Jet 2.x [OneTablePerFile]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Jet 2.x [IndexDialog]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Jet 2.x [CreateDBOnExport]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Jet 2.x [IsamType]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Jet 3.x [OneTablePerFile]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Jet 3.x [IndexDialog]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Jet 3.x [CreateDBOnExport]</pattern>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\ISAM Formats\Jet 3.x [IsamType]</pattern>
+          </objectSet>
+        </include>
+        <!-- Windows Bug 1591682: 
+				<merge script="MigXmlHelper.SourcePriority()">
+					<objectSet>
+						<pattern type="Registry">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 2.x [ForceCP] </pattern>
+					</objectSet>
+				</merge>
+-->
+        <include>
+          <objectSet>
+            <pattern type="Registry">HKLM\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 3.x [ForceCP]</pattern>
+          </objectSet>
+        </include>
+        <!--			<merge script="MigXmlHelper.SourcePriority()">
+					<objectSet>
+						<pattern type="Registry">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Jet 3.x [ForceCP] </pattern>
+					</objectSet>
+				</merge>
+-->
+      </rules>
+    </migXml>
+    <migrationDisplayID>Additional_Options\Windows_Core_Settings</migrationDisplayID>
+  </migration>
+</assembly>

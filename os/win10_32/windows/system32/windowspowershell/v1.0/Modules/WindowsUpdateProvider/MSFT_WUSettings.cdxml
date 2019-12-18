@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  This file contains the definitions of the MSFT_WUSettings class functions.
+  Of these, Get-WUAVersion and GetWUIsPendingReboot are the two expected to work on Nano server
+
+  Exports:
+  Get-WUAVersion
+  Get-WULastScanSuccessDate
+  Get-WULastInstallationDate
+  Get-WUIsPendingReboot
+-->
+<PowerShellMetadata xmlns="http://schemas.microsoft.com/cmdlets-over-objects/2009/11">
+  <Class ClassName="root/Microsoft/Windows/WindowsUpdate/MSFT_WUSettings">
+    <Version>1.0.0.1</Version>
+    <DefaultNoun>WUSettings</DefaultNoun>
+    <StaticCmdlets>
+      <Cmdlet>
+        <CmdletMetadata Verb="Get" Noun="WUAVersion" />
+        <Method MethodName="GetWUAVersion">
+          <ReturnValue>
+            <Type PSType="System.UInt32" />
+            <CmdletOutputMetadata>
+              <ErrorCode />
+            </CmdletOutputMetadata>
+          </ReturnValue>
+          <Parameters>
+            <Parameter ParameterName="WUAVersion">
+              <Type PSType="System.String" />
+              <CmdletOutputMetadata />
+            </Parameter>
+          </Parameters>
+        </Method>
+      </Cmdlet>
+      <Cmdlet>
+        <CmdletMetadata Verb="Get" Noun="WULastInstallationDate" />
+        <Method MethodName="GetLastUpdateInstallationDate">
+          <ReturnValue>
+            <Type PSType="System.UInt32" />
+            <CmdletOutputMetadata>
+              <ErrorCode />
+            </CmdletOutputMetadata>
+          </ReturnValue>
+          <Parameters>
+            <Parameter ParameterName="LastUpdateInstallationDate">
+              <Type PSType="System.DateTime" />
+              <CmdletOutputMetadata />
+            </Parameter>
+          </Parameters>
+        </Method>
+      </Cmdlet>
+      <Cmdlet>
+        <CmdletMetadata Verb="Get" Noun="WULastScanSuccessDate" />
+        <Method MethodName="GetLastScanSuccessDate">
+          <ReturnValue>
+            <Type PSType="System.UInt32" />
+            <CmdletOutputMetadata>
+              <ErrorCode />
+            </CmdletOutputMetadata>
+          </ReturnValue>
+          <Parameters>
+            <Parameter ParameterName="LastScanSuccessDate">
+              <Type PSType="System.DateTime" />
+              <CmdletOutputMetadata />
+            </Parameter>
+          </Parameters>
+        </Method>
+      </Cmdlet>
+      <Cmdlet>
+        <CmdletMetadata Verb="Get" Noun="WUIsPendingReboot" />
+        <Method MethodName="IsPendingReboot">
+          <ReturnValue>
+            <Type PSType="System.UInt32" />
+            <CmdletOutputMetadata>
+              <ErrorCode />
+            </CmdletOutputMetadata>
+          </ReturnValue>
+          <Parameters>
+            <Parameter ParameterName="PendingReboot">
+              <Type PSType="System.Boolean" />
+              <CmdletOutputMetadata />
+            </Parameter>
+          </Parameters>
+        </Method>
+      </Cmdlet>
+    </StaticCmdlets>
+  </Class>
+
+
+</PowerShellMetadata>
